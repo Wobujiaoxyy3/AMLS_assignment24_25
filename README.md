@@ -45,6 +45,8 @@ python main.py --task A --model resnet18
 ```
 This command initializes the training and evaluation of the ResNet18 model on the BreastMNIST dataset.
 
+**Important**: If you need to modify the batch size of the model, you will need to make changes in the corresponding Python script for each model.
+
 Requirements:
 Python 3.9 or higher
 Matplotlib
@@ -52,3 +54,5 @@ Numpy
 Tensorflow
 
 **Important**: Ensure compatibility among these packages to avoid conflicts during installation or runtime.
+
+
