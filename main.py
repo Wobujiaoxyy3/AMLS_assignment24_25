@@ -21,7 +21,7 @@ elif args.task == 'B':
     dataset_path = 'Datasets/bloodmnist.npz'
 
 # Load and preprocess data
-x_train, y_train, x_val, y_val, x_test, y_test = load_and_preprocess_data(dataset_path, add_channel=(args.task == 'B'), if_categorize=(args.task == 'B'))
+x_train, y_train, x_val, y_val, x_test, y_test = load_and_preprocess_data(dataset_path, add_channel=(args.task == 'A'), if_categorize=(args.task == 'B'))
 
 # Select model and run the task
 if args.model == 'baseline_a' and args.task == 'A':
