@@ -35,7 +35,7 @@ def train_and_evaluate_baseline_a(model, x_train, y_train, x_val, y_val, x_test,
         metrics=['accuracy']
     )
     # set early stopping
-    early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+    early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
     # train the model
     history = model.fit(
@@ -57,6 +57,6 @@ def use_baseline_a(x_train, y_train, x_val, y_val, x_test, y_test):
     input_shape = x_train.shape[1:]
     model = baseline_model_a(input_shape)
 
-    history, test_loss, test_accuracy = train_and_evaluate_baseline_a(model, x_train, y_train, x_val, y_val, x_test, y_test, batch_size=16, epochs=50)
+    history, test_loss, test_accuracy = train_and_evaluate_baseline_a(model, x_train, y_train, x_val, y_val, x_test, y_test, batch_size=128, epochs=100)
 
     return history, test_loss, test_accuracy

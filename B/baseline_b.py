@@ -34,7 +34,7 @@ def train_and_evaluate_baseline_b(model, x_train, y_train, x_val, y_val, x_test,
         metrics=['accuracy']
     )
     # set early stopping
-    early_stopping = EarlyStopping(monitor='val_loss', patience=5, restore_best_weights=True)
+    early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
 
     # train the model
     history = model.fit(
